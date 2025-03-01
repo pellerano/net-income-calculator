@@ -110,7 +110,7 @@ function ResultsCard({ results, salary }) {
         </>
       ) : (
         <>
-          <CardContent className="flex flex-col gap-4 justify-center items-center h-full pb-6">
+          <CardContent className="flex flex-col gap-4 justify-center items-center h-full pb-6 text-center">
             <Loading />
             <p>Introduce tu salario y ahorro mensual para ver tus resultados</p>
           </CardContent>
