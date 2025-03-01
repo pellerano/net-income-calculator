@@ -31,7 +31,10 @@ export default function RootLayout({ children }) {
         <footer className="text-center text-[#ebb998] p-4 flex items-center justify-center gap-2">
           <Github size={20} />
           <p>
-            <a href="https://github.com/pellerano" target="_blank">
+            <a
+              href="https://github.com/pellerano/net-income-calculator"
+              target="_blank"
+            >
               Desarrollado por Hermes Pellerano
             </a>
           </p>
