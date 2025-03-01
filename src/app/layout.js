@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Github } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +28,14 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#fff0e6]`}
       >
         {children}
+        <footer className="text-center text-[#ebb998] p-4 flex items-center justify-center gap-2">
+          <Github size={20} />
+          <p>
+            <a href="https://github.com/pellerano" target="_blank">
+              Desarrollado por Hermes Pellerano
+            </a>
+          </p>
+        </footer>
       </body>
     </html>
   );

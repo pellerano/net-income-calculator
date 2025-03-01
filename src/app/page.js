@@ -20,7 +20,7 @@ export default function Home() {
   }, [salary]);
 
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="items-center justify-items-center min-h-9/10 p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <div className="mb-10 text-center flex flex-col items-center">
         <DRFlag />
         <h1 className="text-4xl font-bold my-2">Calculadora de Sueldo Neto</h1>
