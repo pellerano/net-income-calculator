@@ -10,7 +10,6 @@ The **Net Income Calculator** is a tool designed to help employees and freelance
 - 📊 **ISR Calculation**: Automatically applies the **Impuesto Sobre la Renta (ISR)** progressive tax brackets.
 - 🏥 **TSS Deductions**: Includes **AFP (pension fund) and SFS (health insurance)** calculations.
 - ⚖️ **Freelancer & Employee Support**: Supports both **independent contractors** and **salaried employees**.
-- 💰 **Bonuses & Extra Income**: Adjusts for **bonuses, commissions, and other taxable income**.
 
 ## How It Works
 
@@ -51,11 +50,11 @@ The **Net Income Calculator** is a tool designed to help employees and freelance
    ```
 2. **Install Dependencies**:
    ```sh
-   npm install
+   yarn
    ```
 3. **Run the Application**:
    ```sh
-   npm start
+   yarn dev
    ```
 
 ## Contributing
