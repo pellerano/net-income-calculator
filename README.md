@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Net Income Calculator** is a tool designed to help employees and freelancers in the **Dominican Republic** determine their **take-home pay** after deductions such as **income tax (ISR), social security (TSS), and other withholdings**.
+The **Net Income Calculator** is a tool made to help employees and freelancers in the **Dominican Republic** determine their **take-home pay** after deductions such as **income tax (ISR), social security (TSS), and other withholdings**.
 
 ## Features
 
