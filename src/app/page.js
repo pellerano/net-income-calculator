@@ -1,11 +1,10 @@
-"use client";
-import { useMemo, useState } from "react";
-import InputCard from "@/components/common/InputCard";
-import ResultsCard from "@/components/common/ResultsCard";
-import useCalculator from "@/hooks/use-calculator";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Emoji from "react-emoji-render";
-import DRFlag from "@/components/common/DRFlag";
+'use client';
+import { useMemo, useState } from 'react';
+import InputCard from '@/components/common/InputCard';
+import ResultsCard from '@/components/common/ResultsCard';
+import useCalculator from '@/hooks/use-calculator';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import DRFlag from '@/components/common/DRFlag';
 
 export default function Home() {
   const [salary, setSalary] = useState({ salary: 0, savings: 0 });
@@ -20,7 +19,7 @@ export default function Home() {
   }, [salary]);
 
   return (
-    <div className="items-center justify-items-center min-h-9/10 p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="items-center justify-items-center min-h-9/10 p-8 pb-20 gap-16 sm:p-20 sm:pt-4 font-[family-name:var(--font-geist-sans)]">
       <div className="mb-10 text-center flex flex-col items-center">
         <DRFlag />
         <h1 className="text-4xl font-bold my-2">Calculadora de Sueldo Neto</h1>

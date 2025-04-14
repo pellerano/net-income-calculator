@@ -44,7 +44,41 @@ const useCalculator = () => {
     return { yearly: isr, monthly, biweekly };
   }
 
-  return { calculate };
+  function estimateGrossFromDeductions({ afpTarget, sfsTarget, isrTarget }) {
+    let low = 0;
+    let high = 2000000; // upper bound guess
+    let guess, afp, sfs, isr, taxable, isrCalc;
+
+    const tolerance = 0.01;
+
+    while (high - low > tolerance) {
+      guess = (low + high) / 2;
+      afp = parseFloat((guess * 0.0287).toFixed(2));
+      sfs = parseFloat((guess * 0.0304).toFixed(2));
+      taxable = guess - afp - sfs;
+      isrCalc = calculateISR(taxable).monthly;
+      isr = parseFloat(isrCalc.toFixed(2));
+
+      if (
+        Math.abs(afp - afpTarget) < tolerance &&
+        Math.abs(sfs - sfsTarget) < tolerance &&
+        Math.abs(isr - isrTarget) < tolerance
+      ) {
+        return parseFloat(guess.toFixed(2));
+      }
+
+      // Use isr for comparison, since it's the most complex and non-linear
+      if (isr > isrTarget) {
+        high = guess;
+      } else {
+        low = guess;
+      }
+    }
+
+    return parseFloat(((low + high) / 2).toFixed(2));
+  }
+
+  return { calculate, estimateGrossFromDeductions };
 };
 
 export default useCalculator;
